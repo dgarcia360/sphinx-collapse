@@ -1,0 +1,18 @@
+.collapse-avatar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.collapse-avatar li {
+    list-style: none;
+    text-align: center;
+}
+
+.collapse-avatar li img {
+    max-width: 150px;
+}
+
+.collapse-avatar li a {
+    display: block;
+}

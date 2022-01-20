@@ -1,7 +1,7 @@
 sphinx-collapse
-======================
+===============
 
-``sphinx-collapse`` is a Sphinx extension that helps you recognize the people who have contributed to an open-source project.
+``sphinx-collapse`` is a Sphinx extension that lets you add collapsible content to your documentation.
 
 Collapsibles are useful to hide large amounts of content:
 
@@ -40,6 +40,22 @@ Renders:
 .. image:: https://raw.githubusercontent.com/dgarcia360/sphinx-collapse/main/docs/source/_static/example.png
 
 Check out the full documentation for more customizable options at https://sphinx-collapse.readthedocs.io/
+
+Features
+--------
+
+**Hide content**
+
+Toggle the visibility of content with a Sphinx directive tailored for this purpose.
+
+**Minimal code**
+
+The library does not use JavaScript nor relies on third-party frameworks such as Bootstrap, Tailwind CSS, or Foundation.
+
+**Configurable**
+
+You can then customize the style of the collapsible directive using options or overriding the CSS.
+
 
 Contributing
 ------------

@@ -60,7 +60,7 @@ Contributing
 ------------
 
 We encourage public contributions!
-Please review `CONTRIBUTING <https://sphinx-collapse.readthedocs.io/>`_ for details on our code of conduct and development process.
+Please review `CONTRIBUTING <https://sphinx-collapse.readthedocs.io/en/latest/contribute.html>`_ for details on our code of conduct and development process.
 
 Sponsors
 --------

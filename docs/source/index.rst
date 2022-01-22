@@ -9,17 +9,6 @@ Collapsibles are useful to hide large amounts of content:
 
    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-Get started
------------
-
-.. toctree::
-   :maxdepth: 1
-
-   installation
-   usage
-   reference
-   contribute
-
 Features
 --------
 
@@ -34,6 +23,17 @@ The library does not use JavaScript nor relies on third-party frameworks such as
 **Configurable**
 
 You can then customize the style of the collapsible directive using options or overriding the CSS.
+
+Get started
+-----------
+
+.. toctree::
+   :maxdepth: 1
+
+   installation
+   usage
+   reference
+   contribute
 
 Sponsors
 --------

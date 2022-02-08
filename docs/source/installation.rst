@@ -13,4 +13,4 @@ Installation
 
    .. code-block:: python
 
-      extensions = ['sphinxcontrib.collapse']
+      extensions = ['sphinx_collapse']

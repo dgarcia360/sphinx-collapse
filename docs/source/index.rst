@@ -33,6 +33,7 @@ Get started
    installation
    usage
    reference
+   who-is-using-it
    contribute
 
 Sponsors

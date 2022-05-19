@@ -13,7 +13,7 @@ from docutils.parsers.rst import directives
 from sphinx.application import Sphinx
 from sphinx.util.docutils import SphinxDirective
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 
 class _HTMLElement(nodes.Element, nodes.General):
@@ -40,7 +40,10 @@ class _HTMLElement(nodes.Element, nodes.General):
     def depart(translator, node):
         if node.endtag:
             translator.body.append(f"</{node.tagname}>")
-
+    
+    @staticmethod
+    def default(translator, node):
+        pass
 
 class _HTMLLabel(_HTMLElement):
     """
@@ -151,14 +154,17 @@ def setup(app: Sphinx) -> dict:
     app.add_node(
         _HTMLIcon,
         html=(_HTMLIcon.visit, _HTMLIcon.depart),
+        latex=(_HTMLLabel.default, _HTMLLabel.default),
     )
     app.add_node(
         _HTMLLabel,
         html=(_HTMLLabel.visit, _HTMLLabel.depart),
+        latex=(_HTMLLabel.default, _HTMLLabel.default),
     )
     app.add_node(
         _HTMLInput,
         html=(_HTMLInput.visit, _HTMLInput.depart),
+        latex=(_HTMLLabel.default, _HTMLLabel.default),
     )
     # Add directive
     app.add_directive("collapse", CollapseDirective)

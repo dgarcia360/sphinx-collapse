@@ -10,6 +10,15 @@ and this project adheres to `Semantic Versioning <https://semver.org/spec/v2.0.0
 Next
 ----
 
+0.1.2 - 18 May 2022
+-------------------
+
+Fixed
+=====
+
+* The extension was not compatible with ``sphinx-build latexpdf``.
+
+
 0.1.1 - 19 Jan 2022
 -------------------
 

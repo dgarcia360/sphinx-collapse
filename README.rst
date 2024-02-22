@@ -20,7 +20,7 @@ The library does not use JavaScript nor relies on third-party frameworks such as
 
 **Configurable**
 
-You can then customize the style of the collapsible directive using options or overriding the CSS.
+Customize the style of the collapsible directive using options or overriding the CSS.
 
 Installation
 ------------
@@ -61,11 +61,6 @@ Contributing
 
 We encourage public contributions!
 Please review `CONTRIBUTING <https://sphinx-collapse.readthedocs.io/en/latest/contribute.html>`_ for details on our code of conduct and development process.
-
-Sponsors
---------
-
-This project is sponsored by `Scylla <https://www.scylladb.com/>`_, The Real-Time Big Data Database.
 
 License
 -------

@@ -54,3 +54,47 @@ def test_substitution_prompt(tmp_path: Path) -> None:
     expected = "Lorem ipsum"
     content_html = Path(str(destination_directory)) / "index.html"
     assert expected in content_html.read_text()
+
+def test_collapse_open_by_default(tmp_path: Path) -> None:
+    """
+    The ``collapse`` directive correctly handles the 'open' attribute to make the collapse open by default.
+    """
+    source_directory = tmp_path / "source"
+    source_directory.mkdir()
+    source_file = source_directory / "index.rst"
+    conf_py = source_directory / "conf.py"
+    conf_py.touch()
+    source_file.touch()
+    conf_py_content = dedent(
+        """\
+        extensions = ['sphinx_collapse']
+        """,
+    )
+    conf_py.write_text(conf_py_content)
+    # Assuming 'open' is the option to make the collapse open by default
+    source_file_content = dedent(
+        """\
+        .. collapse:: Heading
+           :open:
+
+           Lorem ipsum
+        """,
+    )
+    source_file.write_text(source_file_content)
+    destination_directory = tmp_path / "destination"
+    args = [
+        sys.executable,
+        "-m",
+        "sphinx",
+        "-b",
+        "html",
+        "-W",
+        str(source_directory),
+        str(destination_directory),
+        str(source_file),
+    ]
+    subprocess.check_output(args=args)
+    content_html = Path(str(destination_directory)) / "index.html"
+    content = content_html.read_text()
+    
+    assert 'checked' in content

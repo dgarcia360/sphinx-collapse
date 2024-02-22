@@ -13,7 +13,7 @@ from docutils.parsers.rst import directives
 from sphinx.application import Sphinx
 from sphinx.util.docutils import SphinxDirective
 
-__version__ = "0.1.2"
+__version__ = "0.1.3"
 
 
 class _HTMLElement(nodes.Element, nodes.General):
@@ -81,7 +81,11 @@ class CollapseDirective(SphinxDirective):
     required_arguments = 1
     optional_arguments = 0
     final_argument_whitespace = True
-    option_spec = {"class_name": directives.unchanged, "icon": directives.unchanged}
+    option_spec = {
+        "class_name": directives.unchanged,
+        "icon": directives.unchanged,
+        "open": directives.flag,
+    }
 
     def run(self):
 
@@ -89,7 +93,8 @@ class CollapseDirective(SphinxDirective):
 
         class_name = self.options.get("class_name", "sphinx_collapse")
         collapse_id = str(uuid4())
-
+        open_by_default = "open" in self.options
+        
         # container
         container_class_name = class_name
         container = nodes.container(
@@ -101,12 +106,15 @@ class CollapseDirective(SphinxDirective):
 
         # input
         input_class_name = class_name + "__input"
-        custom_input = _HTMLInput(
-            type="checkbox",
-            ids=[collapse_id],
-            name=collapse_id,
-            classes=[input_class_name],
-        )
+        input_attributes = {
+            "type": "checkbox",
+            "ids": [collapse_id],
+            "name": collapse_id,
+            "classes": [input_class_name],
+        }
+        if open_by_default:
+            input_attributes["checked"] = "checked"
+        custom_input = _HTMLInput(**input_attributes)
 
         # icon
         icon_class_name = self.options.get("icon", class_name + "__icon")
@@ -168,3 +176,9 @@ def setup(app: Sphinx) -> dict:
     )
     # Add directive
     app.add_directive("collapse", CollapseDirective)
+
+    return {
+        "version": "0.1",
+        "parallel_read_safe": True,
+        "parallel_write_safe": True,
+    }

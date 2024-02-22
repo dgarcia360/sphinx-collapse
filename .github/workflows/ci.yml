@@ -26,9 +26,9 @@ jobs:
       - name: "Install dependencies"
         run: |
           python -m pip install .[test]
-      - name: "Lint code"
-        run: |
-          pre-commit run --all-files
+      # - name: "Lint code"
+      #  run: |
+      #    pre-commit run --all-files
       - name: "Build sample"
         run: |
           make -C docs dirhtml

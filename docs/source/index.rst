@@ -9,6 +9,11 @@ Collapsibles are useful to hide large amounts of content:
 
    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
+.. collapse:: Click here
+   :open:
+
+   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
 Features
 --------
 
@@ -22,7 +27,7 @@ The library does not use JavaScript nor relies on third-party frameworks such as
 
 **Configurable**
 
-You can then customize the style of the collapsible directive using options or overriding the CSS.
+Customize the style of the collapsible directive using options or overriding the CSS.
 
 Get started
 -----------
@@ -35,11 +40,6 @@ Get started
    reference
    who-is-using-it
    contribute
-
-Sponsors
---------
-
-This project is sponsored by `Scylla <https://www.scylladb.com/>`_, The Real-Time Big Data Database.
 
 License
 -------

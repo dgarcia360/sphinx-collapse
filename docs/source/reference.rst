@@ -13,6 +13,11 @@ Collapse directive
     The HTML class name that wraps the ``collapse`` element.
     By default, this is ``sphinx_collapse``.
 
+  .. rst:directive:option:: open
+    :type: string
+
+    If set, the dropdown is open by default.
+
   .. rst:directive:option:: icon
     :type: string
 

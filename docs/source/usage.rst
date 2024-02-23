@@ -1,7 +1,7 @@
 Usage
 =====
 
-add the collapse directive in your reStructuredText content. Here's a basic example:
+Add the collapse directive in your reStructuredText content. Here's a basic example:
 
 .. code-block:: rst
 

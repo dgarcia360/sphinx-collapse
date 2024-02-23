@@ -1,9 +1,10 @@
 Overview
 ========
 
-``sphinx-collapse`` is a Sphinx extension that lets you add collapsible content to your documentation.
+The ``sphinx-collapse`` extension enhances Sphinx documentation by introducing collapsible sections.
+This feature allows documentation authors to create toggles for hiding and revealing detailed content, making documents more manageable and navigable for readers.
 
-Collapsibles are useful to hide large amounts of content:
+Example usage:
 
 .. collapse:: Click here
 
@@ -14,15 +15,15 @@ Features
 
 **Hide content**
 
-Toggle the visibility of content with a Sphinx directive tailored for this purpose.
+Use a Sphinx directive specifically designed to toggle content visibility, enhancing document readability.
 
-**Minimal code**
+**Lightweight**
 
-The library does not use JavaScript nor relies on third-party frameworks such as Bootstrap, Tailwind CSS, or Foundation.
+This extension operates without JavaScript and does not depend on external CSS frameworks like Bootstrap, Tailwind CSS, or Foundation.
 
-**Configurable**
+**Customizable**
 
-Customize the style of the collapsible directive using options or overriding the CSS.
+Offers flexibility in styling collapsible sections through various options and CSS customizations to match your documentation's aesthetic.
 
 Get started
 -----------

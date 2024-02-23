@@ -1,9 +1,10 @@
 sphinx-collapse
 ===============
 
-``sphinx-collapse`` is a Sphinx extension that lets you add collapsible content to your documentation.
+The ``sphinx-collapse`` extension enhances Sphinx documentation by introducing collapsible sections.
+This feature allows documentation authors to create toggles for hiding and revealing detailed content, making documents more manageable and navigable for readers.
 
-Collapsibles are useful to hide large amounts of content:
+Example:
 
 .. image:: https://raw.githubusercontent.com/dgarcia360/sphinx-collapse/main/docs/source/_static/example.png
 
@@ -41,7 +42,7 @@ Installation
 Usage
 -----
 
-Using the directive:
+Add the collapse directive in your reStructuredText content. Here's a basic example:
 
 .. code-block:: rst
 
@@ -50,7 +51,7 @@ Using the directive:
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-Renders:
+Example output:
 
 .. image:: https://raw.githubusercontent.com/dgarcia360/sphinx-collapse/main/docs/source/_static/example.png
 

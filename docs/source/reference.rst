@@ -2,8 +2,20 @@
 Reference
 =========
 
-Collapse directive
-------------------
+The `collapse` directive allows you to create collapsible content blocks in your documentation with an optional heading.
+
+Syntax
+------
+
+.. code-block:: rst
+
+  .. collapse:: <string>
+    :class_name: <string>
+    :open: <string>
+    :icon: <string>
+
+Options
+-------
 
 .. rst:directive:: .. collapse:: <heading>
 
@@ -16,7 +28,7 @@ Collapse directive
   .. rst:directive:option:: open
     :type: string
 
-    If set, the dropdown is open by default.
+    If set, the collapsible block is expanded by default.
 
   .. rst:directive:option:: icon
     :type: string

@@ -7,8 +7,14 @@ All notable changes to this project will be documented in this file.
 The format is based on `Keep a Changelog <https://keepachangelog.com/en/1.0.0/>`_,
 and this project adheres to `Semantic Versioning <https://semver.org/spec/v2.0.0.html>`_.
 
-Next
-----
+0.1.4 - 27 Feb 2026
+-------------------
+
+Fixed
+=====
+
+* Fixed ``KeyError`` for missing node attributes (e.g. ``backrefs``) in newer
+  versions of docutils by using ``.pop()`` with a default value of ``None``.
 
 0.1.3 - 22 Feb 2024
 -------------------

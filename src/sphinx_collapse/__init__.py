@@ -13,7 +13,7 @@ from docutils.parsers.rst import directives
 from sphinx.application import Sphinx
 from sphinx.util.docutils import SphinxDirective
 
-__version__ = "0.1.3"
+__version__ = "0.1.4"
 
 
 class _HTMLElement(nodes.Element, nodes.General):
@@ -27,11 +27,11 @@ class _HTMLElement(nodes.Element, nodes.General):
         attributes = node.attributes.copy()
 
         # Not necessary
-        attributes.pop("ids")
-        attributes.pop("classes")
-        attributes.pop("names")
-        attributes.pop("dupnames")
-        attributes.pop("backrefs")
+        attributes.pop("ids", None)
+        attributes.pop("classes", None)
+        attributes.pop("names", None)
+        attributes.pop("dupnames", None)
+        attributes.pop("backrefs", None)
 
         text = translator.starttag(node, node.tagname, **attributes)
         translator.body.append(text.strip())
